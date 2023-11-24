@@ -22,4 +22,13 @@ class TranslateControllerTest {
                 .andExpect(MockMvcResultMatchers.content().string(Matchers.is(sourceText)))
         ;
     }
+
+    @Test
+    void aliTranslate() throws Exception {
+        String sourceText = "中文";
+        String expectedTranslatedText = "Chinese";
+        mvc.perform(MockMvcRequestBuilders.get("/translate/ali/" + sourceText))
+                .andExpect(MockMvcResultMatchers.content().string(Matchers.is(expectedTranslatedText)))
+        ;
+    }
 }

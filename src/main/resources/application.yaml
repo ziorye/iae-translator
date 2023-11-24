@@ -1,2 +1,9 @@
 server:
   port: 8090
+
+custom:
+  ali:
+    translation:
+      accessKeyId: 'your-accessKeyId'
+      secretAccessKey: 'your-secretAccessKey'
+      endpoint: 'mt.cn-hangzhou.aliyuncs.com'
